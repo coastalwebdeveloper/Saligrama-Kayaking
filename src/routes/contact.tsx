@@ -28,7 +28,7 @@ const info = [
     icon: MapPin,
     title: "Location",
     lines: ["Saligrama Kayaking Point, Saligrama", "Karnataka 576226, Udupi District"],
-    href: "https://www.google.com/maps/place/Saligrama+Kayaking+Point+-+Sails+and+More+Adventures+Udupi/@13.491321,74.6924686,17z",
+    href: "https://www.google.com/maps/place/Saligrama+Kayaking+Point+-+Sails+and+More+Adventures+Udupi/@13.491321,74.6924686,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbc97dec29c7f9d:0x1db74e95529aac6a!8m2!3d13.4913158!4d74.6950435!16s%2Fg%2F11rhs2vqn3?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     icon: Phone,
@@ -104,7 +104,7 @@ function ContactPage() {
             <div className="rounded-2xl overflow-hidden shadow-soft border border-border h-64">
               <iframe
                 title="Saligrama Kayaking Point map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.4!2d74.6924686!3d13.491321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc97dec29c7f9d%3A0x1db74e95529aac6a!2sSaligrama%20Kayaking%20Point%20-%20Sails%20and%20More%20Adventures%20Udupi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.4037!2d74.6924686!3d13.491321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc97dec29c7f9d%3A0x1db74e95529aac6a!2sSaligrama%20Kayaking%20Point%20-%20Sails%20and%20More%20Adventures%20Udupi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 className="w-full h-full"
                 loading="lazy"
                 allowFullScreen
@@ -112,7 +112,7 @@ function ContactPage() {
               />
             </div>
             <a
-              href="https://www.google.com/maps/place/Saligrama+Kayaking+Point+-+Sails+and+More+Adventures+Udupi/@13.491321,74.6924686,17z"
+              href="https://www.google.com/maps/place/Saligrama+Kayaking+Point+-+Sails+and+More+Adventures+Udupi/@13.491321,74.6924686,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbc97dec29c7f9d:0x1db74e95529aac6a!8m2!3d13.4913158!4d74.6950435!16s%2Fg%2F11rhs2vqn3?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-sm text-accent font-medium hover:underline"

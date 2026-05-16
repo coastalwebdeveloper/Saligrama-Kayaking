@@ -10,6 +10,10 @@ import guide from "@/assets/guide.jpg";
 import mangrove from "@/assets/mangrove-kayak.jpg";
 import nature from "@/assets/mangrove-nature.jpg";
 import group from "@/assets/group-kayak.jpg";
+import kayak3 from "@/assets/kayak-adventure-3.webp";
+import kayak7 from "@/assets/kayak-adventure-7.webp";
+import kayak11 from "@/assets/kayak-adventure-11.webp";
+import newsletter from "@/assets/Newsletter.webp";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -31,7 +35,7 @@ const values = [
 ];
 
 const stats = [
-  { value: "2,600+", label: "Happy Visitors" },
+  { value: "2 Lakh+", label: "Happy Customers" },
   { value: "4.9★", label: "Google Rating" },
   { value: "5+", label: "Years of Experience" },
   { value: "100%", label: "Safety Record" },
@@ -70,7 +74,7 @@ function AboutPage() {
               Every guide on our team is a local who has spent years on these waters. We don't just show you the route — we share the stories, the birds, the tides, and the quiet magic that makes this place so special.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              With over 2,600 happy visitors and a 4.9-star rating, we've built our reputation on one thing: genuine, safe, and unforgettable experiences.
+              With over 2 lakh happy customers and a 4.9-star rating, we've built our reputation on one thing: genuine, safe, and unforgettable experiences.
             </p>
           </div>
           <div className="reveal relative rounded-3xl overflow-hidden shadow-glow aspect-[4/5]">
@@ -93,6 +97,31 @@ function AboutPage() {
                 <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recognition */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+          <div className="reveal relative rounded-3xl overflow-hidden shadow-glow">
+            <img src={newsletter} alt="Recognition from Prime Minister Narendra Modi and Election Commission of India" loading="lazy" className="w-full h-auto object-contain" />
+          </div>
+          <div className="reveal">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent font-semibold">National Recognition</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary text-balance">
+              Recognized by Prime Minister Narendra Modi
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              Sails & More Adventures Mangrove Kayaking Point, Saligrama, Udupi, received recognition from Prime Minister Narendra Modi and the Election Commission of India for their innovative voter awareness initiative through kayaking activities.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              The initiative was appreciated for creatively promoting voter awareness in Karnataka using kayaking boats in the scenic river areas of Udupi district. The campaign gained national attention after being highlighted on social media by Prime Minister Narendra Modi, showcasing it as a unique and inspiring approach to encourage citizens to participate in elections and cast their votes responsibly.
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 bg-highlight/60 rounded-xl px-4 py-2">
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+              <span className="text-sm font-medium text-foreground">Featured by PM Modi on Social Media</span>
+            </div>
           </div>
         </div>
       </section>
@@ -122,7 +151,7 @@ function AboutPage() {
       <section className="py-16 bg-highlight/40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid grid-cols-3 gap-4 rounded-3xl overflow-hidden">
-            {[nature, group, mangrove].map((src, i) => (
+            {[kayak3, kayak7, kayak11].map((src, i) => (
               <div key={i} className="reveal aspect-[4/3] overflow-hidden rounded-2xl" style={{ transitionDelay: `${i * 100}ms` }}>
                 <img src={src} alt="" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>

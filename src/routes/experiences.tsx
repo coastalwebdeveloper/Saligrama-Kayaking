@@ -11,6 +11,12 @@ import sunrise from "@/assets/sunrise-kayak.jpg";
 import sunset from "@/assets/sunset-kayak.jpg";
 import group from "@/assets/group-kayak.jpg";
 import guide from "@/assets/guide.jpg";
+import kayak1 from "@/assets/kayak-adventure-1.webp";
+import kayak4 from "@/assets/kayak-adventure-4.webp";
+import kayak5 from "@/assets/kayak-adventure-5.webp";
+import kayak8 from "@/assets/kayak-adventure-8.webp";
+import kayak12 from "@/assets/kayak-adventure-12.webp";
+import kayak14 from "@/assets/kayak-adventure-14.webp";
 
 export const Route = createFileRoute("/experiences")({
   component: ExperiencesPage,
@@ -26,7 +32,7 @@ const WHATSAPP = "https://wa.me/917259277799?text=Hi%2C%20I%27d%20like%20to%20bo
 
 const exps = [
   {
-    img: mangrove,
+    img: kayak14,
     title: "Mangrove Kayaking",
     desc: "Glide through tunnels of green mangroves and discover hidden waterways teeming with birds and wildlife. This is our signature experience — a slow, meditative paddle through nature's corridors.",
     price: "₹500",
@@ -35,7 +41,7 @@ const exps = [
     level: "Beginner friendly",
   },
   {
-    img: sunrise,
+    img: kayak5,
     title: "Sunrise Ride",
     desc: "Witness misty mornings and golden reflections on perfectly still water. The world wakes up around you as you paddle through the calm backwaters at dawn.",
     price: "₹600",
@@ -53,7 +59,7 @@ const exps = [
     level: "Beginner friendly",
   },
   {
-    img: group,
+    img: kayak4,
     title: "Group Adventure",
     desc: "Special packages for friends, families and corporate teams. We arrange multiple kayaks, safety briefings, and guided routes tailored to your group's pace and comfort.",
     price: "From ₹450/pax",

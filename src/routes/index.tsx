@@ -14,6 +14,9 @@ import mangrove from "@/assets/mangrove-kayak.jpg";
 import nature from "@/assets/mangrove-nature.jpg";
 import sunrise from "@/assets/sunrise-kayak.jpg";
 import ctaBg from "@/assets/cta-sunset.jpg";
+import kayak2 from "@/assets/kayak-adventure-2.webp";
+import kayak6 from "@/assets/kayak-adventure-6.webp";
+import kayak9 from "@/assets/kayak-adventure-9.webp";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -86,7 +89,7 @@ function Hero() {
 function Highlights() {
   const items = [
     { icon: Star, label: "4.9 ★ Rating", sub: "Google Reviews" },
-    { icon: Users, label: "2,600+", sub: "Happy Visitors" },
+    { icon: Users, label: "2 Lakh+", sub: "Happy Customers" },
     { icon: ShieldCheck, label: "Safe Tours", sub: "Certified Guides" },
     { icon: Sunrise, label: "Sunrise & Sunset", sub: "Daily Rides" },
   ];
@@ -123,16 +126,16 @@ function Featured() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
         <div className="reveal relative h-[460px] sm:h-[540px]">
           <div className="absolute left-0 top-0 w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-glow ring-4 ring-background animate-[float_7s_ease-in-out_infinite]">
-            <img src={mangrove} alt="" className="w-full h-full object-cover" loading="lazy" />
+            <img src={kayak2} alt="" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="absolute right-0 top-20 w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-glow ring-4 ring-background animate-[float_7s_ease-in-out_infinite]" style={{ animationDelay: "1s" }}>
-            <img src={nature} alt="" className="w-full h-full object-cover" loading="lazy" />
+            <img src={kayak6} alt="" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="absolute left-12 bottom-0 w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-glow ring-4 ring-background animate-[float_7s_ease-in-out_infinite]" style={{ animationDelay: "2s" }}>
-            <img src={sunrise} alt="" className="w-full h-full object-cover" loading="lazy" />
+            <img src={kayak9} alt="" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <span className="absolute bottom-6 right-2 glass text-primary px-4 py-2 rounded-full text-xs font-semibold bg-card/90">
-            <Heart className="w-3.5 h-3.5 inline mr-1 text-accent" /> Loved by 2,600+
+            <Heart className="w-3.5 h-3.5 inline mr-1 text-accent" /> Loved by 2 Lakh+
           </span>
         </div>
         <div className="reveal">

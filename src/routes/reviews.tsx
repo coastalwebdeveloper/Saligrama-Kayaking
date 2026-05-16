@@ -7,6 +7,7 @@ import { Star } from "lucide-react";
 
 import nature from "@/assets/mangrove-nature.jpg";
 import hero from "@/assets/hero-kayak.jpg";
+import kayak4 from "@/assets/kayak-adventure-4.webp";
 
 export const Route = createFileRoute("/reviews")({
   component: ReviewsPage,
@@ -40,7 +41,7 @@ function ReviewsPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden gradient-teal text-white">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${nature})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${kayak4})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 text-center">
           <span className="text-xs uppercase tracking-[0.22em] text-secondary font-semibold">Google Reviews</span>
           <h1 className="mt-3 text-4xl sm:text-6xl font-bold text-balance">What Paddlers Are Saying</h1>
@@ -61,8 +62,8 @@ function ReviewsPage() {
               <div className="mt-2 text-sm text-muted-foreground">Overall Rating</div>
             </div>
             <div className="bg-card rounded-2xl p-6 shadow-soft">
-              <div className="text-5xl font-bold text-primary font-display">2,600+</div>
-              <div className="mt-2 text-sm text-muted-foreground">Happy Visitors</div>
+              <div className="text-5xl font-bold text-primary font-display">2 Lakh+</div>
+              <div className="mt-2 text-sm text-muted-foreground">Happy Customers</div>
             </div>
             <div className="bg-card rounded-2xl p-6 shadow-soft">
               <div className="text-5xl font-bold text-primary font-display">100%</div>
@@ -106,7 +107,7 @@ function ReviewsPage() {
         <img src={hero} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
         <div className="relative mx-auto max-w-3xl px-5 lg:px-8 text-center text-white reveal">
-          <h2 className="text-3xl sm:text-5xl font-bold text-balance">Join 2,600+ Happy Paddlers</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold text-balance">Join 2 Lakh+ Happy Customers</h2>
           <p className="mt-4 text-white/85">Create your own story on the backwaters of Saligrama.</p>
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="mt-6 inline-block">
             <button className="rounded-full bg-accent hover:bg-accent/90 text-white font-semibold h-12 px-7 shadow-glow transition-colors">

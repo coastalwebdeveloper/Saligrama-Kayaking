@@ -7,9 +7,9 @@ const WHATSAPP = "https://wa.me/917259277799?text=Hi%2C%20I%27d%20like%20to%20bo
 
 const links = [
   { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
   { label: "Experiences", to: "/experiences" },
   { label: "Gallery", to: "/gallery" },
-  { label: "About", to: "/about" },
   { label: "Reviews", to: "/reviews" },
   { label: "Contact", to: "/contact" },
 ];

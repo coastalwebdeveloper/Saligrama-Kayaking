@@ -47,7 +47,7 @@ export function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
               <a
-                href="https://www.google.com/maps/place/Saligrama+Kayaking+Point+-+Sails+and+More+Adventures+Udupi/@13.491321,74.6924686,17z"
+                href="https://www.google.com/maps/place/Saligrama+Kayaking+Point+-+Sails+and+More+Adventures+Udupi/@13.491321,74.6924686,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbc97dec29c7f9d:0x1db74e95529aac6a!8m2!3d13.4913158!4d74.6950435!16s%2Fg%2F11rhs2vqn3?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-secondary transition-colors"
