@@ -43,14 +43,9 @@ export function Nav() {
           <img
             src="/SKP_Logo_New.png"
             alt="Saligrama Kayaking Point Logo"
-            width={40}
-            height={40}
-            className="rounded-full object-contain shrink-0"
-            style={{
-              background: transparent ? "rgba(255,255,255,0.12)" : "transparent",
-              boxShadow: transparent ? "0 2px 12px rgba(0,0,0,0.18)" : "none",
-              transition: "background 0.3s, box-shadow 0.3s",
-            }}
+            height={52}
+            className="object-contain shrink-0"
+            style={{ maxHeight: 52, width: "auto" }}
           />
           <span className={transparent ? "text-white" : "text-foreground"}>Saligrama Kayaking</span>
         </Link>
