@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Waves, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WHATSAPP = "https://wa.me/917259277799?text=Hi%2C%20I%27d%20like%20to%20book%20a%20kayaking%20experience";
@@ -39,10 +39,19 @@ export function Nav() {
       }`}
     >
       <nav className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg">
-          <span className={`grid place-items-center w-9 h-9 rounded-full ${transparent ? "glass text-white" : "gradient-teal text-primary-foreground"}`}>
-            <Waves className="w-4 h-4" />
-          </span>
+        <Link to="/" className="flex items-center gap-2.5 font-display font-bold text-lg">
+          <img
+            src="/SKP_Logo_New.png"
+            alt="Saligrama Kayaking Point Logo"
+            width={40}
+            height={40}
+            className="rounded-full object-contain shrink-0"
+            style={{
+              background: transparent ? "rgba(255,255,255,0.12)" : "transparent",
+              boxShadow: transparent ? "0 2px 12px rgba(0,0,0,0.18)" : "none",
+              transition: "background 0.3s, box-shadow 0.3s",
+            }}
+          />
           <span className={transparent ? "text-white" : "text-foreground"}>Saligrama Kayaking</span>
         </Link>
 
