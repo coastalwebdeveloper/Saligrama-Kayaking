@@ -547,18 +547,16 @@ function VideoGalleryPage() {
         }
         @media (max-width: 640px) {
           .vg-filter-tab {
-            padding: 0.4rem 0.875rem;
-            font-size: 0.75rem;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.72rem;
           }
           .vg-filter-bar-inner {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.35rem;
-            padding: 0.5rem 1rem !important;
+            /* Keep single row on mobile — pills scroll, count stays right */
+            padding: 0.45rem 0.875rem !important;
+            gap: 0.375rem;
           }
           .vg-filter-results {
-            align-self: flex-end;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
           }
         }
         .vg-search-input {
