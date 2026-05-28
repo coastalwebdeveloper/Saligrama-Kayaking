@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VideoGalleryRouteImport } from './routes/video-gallery'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
@@ -16,6 +17,11 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VideoGalleryRoute = VideoGalleryRouteImport.update({
+  id: '/video-gallery',
+  path: '/video-gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/experiences': typeof ExperiencesRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
+  '/video-gallery': typeof VideoGalleryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/experiences': typeof ExperiencesRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
+  '/video-gallery': typeof VideoGalleryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/experiences': typeof ExperiencesRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
+  '/video-gallery': typeof VideoGalleryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,8 +90,16 @@ export interface FileRouteTypes {
     | '/experiences'
     | '/gallery'
     | '/reviews'
+    | '/video-gallery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/experiences' | '/gallery' | '/reviews'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/experiences'
+    | '/gallery'
+    | '/reviews'
+    | '/video-gallery'
   id:
     | '__root__'
     | '/'
@@ -91,6 +108,7 @@ export interface FileRouteTypes {
     | '/experiences'
     | '/gallery'
     | '/reviews'
+    | '/video-gallery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -100,10 +118,18 @@ export interface RootRouteChildren {
   ExperiencesRoute: typeof ExperiencesRoute
   GalleryRoute: typeof GalleryRoute
   ReviewsRoute: typeof ReviewsRoute
+  VideoGalleryRoute: typeof VideoGalleryRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/video-gallery': {
+      id: '/video-gallery'
+      path: '/video-gallery'
+      fullPath: '/video-gallery'
+      preLoaderRoute: typeof VideoGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reviews': {
       id: '/reviews'
       path: '/reviews'
@@ -156,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExperiencesRoute: ExperiencesRoute,
   GalleryRoute: GalleryRoute,
   ReviewsRoute: ReviewsRoute,
+  VideoGalleryRoute: VideoGalleryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

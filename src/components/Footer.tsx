@@ -25,6 +25,7 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-primary-foreground/80">
             <li><Link to="/experiences" className="hover:text-secondary transition-colors">Experiences</Link></li>
             <li><Link to="/gallery" className="hover:text-secondary transition-colors">Gallery</Link></li>
+            <li><Link to="/media" className="hover:text-secondary transition-colors">Media</Link></li>
             <li><Link to="/about" className="hover:text-secondary transition-colors">About Us</Link></li>
             <li><Link to="/reviews" className="hover:text-secondary transition-colors">Reviews</Link></li>
             <li><Link to="/contact" className="hover:text-secondary transition-colors">Contact</Link></li>
