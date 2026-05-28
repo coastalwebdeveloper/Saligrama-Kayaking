@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Waves, MapPin, Phone, Instagram } from "lucide-react";
+import { MapPin, Phone, Instagram } from "lucide-react";
 
 const WHATSAPP = "https://wa.me/917259277799?text=Hi%2C%20I%27d%20like%20to%20book%20a%20kayaking%20experience";
 const PHONE = "tel:+917259277799";
@@ -9,10 +9,14 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-2 font-display font-bold text-lg">
-            <span className="grid place-items-center w-9 h-9 rounded-full bg-accent text-accent-foreground">
-              <Waves className="w-4 h-4" />
-            </span>
+          <div className="flex items-center gap-2.5 font-display font-bold text-lg">
+            <img
+              src="/SKP_Logo_New.png"
+              alt="Saligrama Kayaking Point Logo"
+              height={48}
+              className="object-contain shrink-0"
+              style={{ maxHeight: 48, width: "auto" }}
+            />
             Saligrama Kayaking
           </div>
           <p className="mt-4 text-sm text-primary-foreground/70">
