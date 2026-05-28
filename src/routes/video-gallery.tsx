@@ -526,6 +526,41 @@ function VideoGalleryPage() {
           color: #fff;
           box-shadow: 0 4px 18px -4px color-mix(in oklab, var(--color-primary) 50%, transparent);
         }
+        /* ── Horizontally scrollable pill row (mobile) ── */
+        .vg-filter-scroll {
+          display: flex;
+          align-items: center;
+          gap: 0.375rem;
+          overflow-x: auto;
+          overflow-y: visible;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          -webkit-overflow-scrolling: touch;
+          flex: 1;
+          min-width: 0;
+          padding-bottom: 2px; /* keeps active shadow visible */
+        }
+        .vg-filter-scroll::-webkit-scrollbar { display: none; }
+        /* Fade hint on the right edge so user knows it scrolls */
+        .vg-filter-bar-wrap {
+          position: relative;
+        }
+        @media (max-width: 640px) {
+          .vg-filter-tab {
+            padding: 0.4rem 0.875rem;
+            font-size: 0.75rem;
+          }
+          .vg-filter-bar-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem !important;
+          }
+          .vg-filter-results {
+            align-self: flex-end;
+            font-size: 0.75rem;
+          }
+        }
         .vg-search-input {
           width: 100%;
           padding: 0.875rem 1rem 0.875rem 3rem;
@@ -704,11 +739,18 @@ function VideoGalleryPage() {
           }}
         >
           <div
-            className="mx-auto flex items-center justify-between"
-            style={{ maxWidth: "80rem", padding: "0.6rem 1.25rem" }}
+            className="mx-auto vg-filter-bar-inner"
+            style={{
+              maxWidth: "80rem",
+              padding: "0.6rem 1.25rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "0.5rem",
+            }}
           >
-            {/* Filter Pills */}
-            <div className="flex items-center gap-1.5 flex-wrap">
+            {/* Filter Pills — horizontally scrollable on mobile, no wrapping */}
+            <div className="vg-filter-scroll">
               {filterTabs.map(({ id, label, count }) => (
                 <button
                   key={id}
@@ -717,13 +759,16 @@ function VideoGalleryPage() {
                   className={`vg-filter-tab${activeFilter === id ? " vg-active" : ""}`}
                   style={{
                     color: activeFilter === id ? "#fff" : "var(--color-muted-foreground)",
+                    flexShrink: 0,
                   }}
                 >
                   {label}
                   <span
                     className="inline-flex items-center justify-center rounded-full font-bold"
                     style={{
-                      width: 20, height: 20, fontSize: "0.675rem",
+                      width: 20,
+                      height: 20,
+                      fontSize: "0.675rem",
                       background: activeFilter === id
                         ? "rgba(255,255,255,0.26)"
                         : "var(--color-muted)",
@@ -736,8 +781,11 @@ function VideoGalleryPage() {
               ))}
             </div>
 
-            {/* Results count */}
-            <div className="shrink-0 text-sm font-medium" style={{ color: "var(--color-muted-foreground)" }}>
+            {/* Results count — always visible, shrinks on mobile */}
+            <div
+              className="vg-filter-results shrink-0 font-medium"
+              style={{ color: "var(--color-muted-foreground)", fontSize: "0.8125rem", whiteSpace: "nowrap" }}
+            >
               <span style={{ color: "var(--color-primary)", fontWeight: 700 }}>
                 {filteredVideos.length}
               </span>{" "}
